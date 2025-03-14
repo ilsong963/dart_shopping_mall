@@ -22,6 +22,9 @@ void main() {
       case 4:
         isRunning = exit();
         break;
+      case 6:
+        shoppingMall.resetCart();
+        break;
       default:
         print("지원하지 않는 기능입니다 ! 다시 시도해 주세요 ..");
     }
@@ -30,7 +33,8 @@ void main() {
 
 void printMenu() {
   print('-' * 110);
-  print("[1] 상품 목록 보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품의 총 가격 보기 / [4] 프로그램 종료");
+  print(
+      "[1] 상품 목록 보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품의 총 가격 보기 / [4] 프로그램 종료 / [6] 장바구니 초기화");
   print('-' * 110);
 }
 
