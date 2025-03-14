@@ -36,6 +36,21 @@ class ShoppingMall {
     print("총 $totalPrice원 입니다!");
   }
 
+  void addProduct() {
+    try {
+      print("상품 이름을 입력해 주세요 !");
+
+      String productName = stdin.readLineSync()!;
+      print("상품 가격을 입력해 주세요 !");
+
+      int productPrice = int.parse(stdin.readLineSync()!);
+
+      products.add(Product(productName, productPrice));
+    } catch (e) {
+      print('다음에 이용해주세요');
+    }
+  }
+
   void addToCart() {
     try {
       print("상품 이름을 입력해 주세요 !");
