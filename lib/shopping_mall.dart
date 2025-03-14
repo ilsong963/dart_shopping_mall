@@ -36,6 +36,29 @@ class ShoppingMall {
     print("총 $totalPrice원 입니다!");
   }
 
+  void deleteProduct() {
+    try {
+      print("상품 이름을 입력해 주세요 !");
+      String productName = stdin.readLineSync()!;
+      for (int i = 0; i < products.length; i++) {
+        if (products[i].name == productName) {
+          print("정말 삭제하시겠습니까? (Y/N)");
+          String answer = stdin.readLineSync()!;
+          if (answer == 'Y' || answer == 'y') {
+            products.removeAt(i);
+            print('삭제 되었습니다');
+          }
+        } else {
+          if (i == products.length - 1) {
+            print('해당 상품은 존재하지 않습니다.');
+          }
+        }
+      }
+    } catch (e) {
+      print('다음에 이용해주세요');
+    }
+  }
+
   void addProduct() {
     try {
       print("상품 이름을 입력해 주세요 !");
