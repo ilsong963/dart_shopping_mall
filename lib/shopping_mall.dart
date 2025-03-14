@@ -59,6 +59,7 @@ class ShoppingMall {
           if (answer == 'Y' || answer == 'y') {
             products.removeAt(i);
             print('삭제 되었습니다');
+            return;
           }
         } else {
           if (i == products.length - 1) {
