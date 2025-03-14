@@ -30,6 +30,9 @@ void main() {
       case 6:
         shoppingMall.resetCart();
         break;
+      case 7:
+        shoppingMall.deleteProduct();
+        break;
       default:
         print("지원하지 않는 기능입니다 ! 다시 시도해 주세요 ..");
     }
@@ -39,7 +42,7 @@ void main() {
 void printMenu() {
   print('-' * 110);
   print(
-      "[1] 상품 목록 보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품 보기 / [4] 상품 추가 / [5] 프로그램 종료 / [6] 장바구니 초기화");
+      "[1] 상품 목록 보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품 보기 / [4] 상품 추가 / [5] 프로그램 종료 / [6] 장바구니 초기화 / [7] 상품 삭제");
   print('-' * 110);
 }
 
