@@ -8,7 +8,9 @@ void main() {
 
   while (isRunning) {
     printMenu();
-    inputMenu = int.parse(stdin.readLineSync()!);
+    try {
+      inputMenu = int.parse(stdin.readLineSync()!);
+    } catch (e) {}
     switch (inputMenu) {
       case 1:
         shoppingMall.showProducts();
