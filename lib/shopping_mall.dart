@@ -53,4 +53,14 @@ class ShoppingMall {
       print("입력값이 올바르지 않아요 !");
     }
   }
+
+  void resetCart() {
+    if (totalPrice == 0) {
+      print("이미 장바구니가 비어있습니다");
+    } else {
+      totalPrice = 0;
+
+      print("장바구니를 초기화 합니다");
+    }
+  }
 }
