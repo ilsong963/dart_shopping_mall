@@ -36,6 +36,18 @@ class ShoppingMall {
     print("총 $totalPrice원 입니다!");
   }
 
+  bool isAdmin() {
+    print("관리자 키를 입력해주세요");
+    String adminKey = stdin.readLineSync()!;
+    if (adminKey == 'q1w2e3r4!') {
+      print("환영합니다 관리자님");
+      return true;
+    } else {
+      print("관리자가 아니십니다");
+      return false;
+    }
+  }
+
   void deleteProduct() {
     try {
       print("상품 이름을 입력해 주세요 !");
