@@ -34,3 +34,31 @@ Dart로 제작된 간단한 콘솔 기반 쇼핑몰 애플리케이션입니다.
 <br/>
 
 ## 📌 사용 예시
+
+
+[1] 상품 목록 보기:  
+<img width="921" alt="스크린샷 2025-03-14 오전 11 42 36" src="https://github.com/user-attachments/assets/418e1fd3-44f5-4571-84b8-0cd7d28a99e7" />
+
+
+[2] 장바구니에 담기:  
+<img width="922" alt="스크린샷 2025-03-14 오전 11 43 01" src="https://github.com/user-attachments/assets/af32a72b-c2b5-4a0a-b101-b6529f60aafb" />
+
+[3] 장바구니에 담긴 상품 보기: 
+<img width="923" alt="스크린샷 2025-03-14 오전 11 43 30" src="https://github.com/user-attachments/assets/f282555d-5e98-4c84-a906-e59062e45403" />
+
+[4] 장바구니 초기화:
+<img width="925" alt="스크린샷 2025-03-14 오전 11 43 51" src="https://github.com/user-attachments/assets/85bc2a6c-c21d-482c-b84f-098423f01552" />
+
+[5] 관리자 모드:  
+<img width="923" alt="스크린샷 2025-03-14 오전 11 44 30" src="https://github.com/user-attachments/assets/e7af3255-2b7e-4de2-8918-768db55ca838" />
+
+[6] 상품 추가:
+
+<img width="389" alt="스크린샷 2025-03-14 오전 11 44 54" src="https://github.com/user-attachments/assets/9a0bf3b3-8964-4dc1-9c02-a36d81d4d188" />
+
+[7] 상품 삭제:
+
+<img width="372" alt="스크린샷 2025-03-14 오전 11 45 45" src="https://github.com/user-attachments/assets/14ad2a67-0dfd-4596-8a46-a26e6f36d373" />
+
+[6] 프로그램 종료:  
+<img width="926" alt="스크린샷 2025-03-14 오전 11 46 06" src="https://github.com/user-attachments/assets/0a22b145-99f3-4f39-907b-2eb81ec5781d" />
