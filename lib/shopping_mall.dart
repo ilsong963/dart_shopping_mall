@@ -10,7 +10,7 @@ class ShoppingMall {
     Product('반바지', 38000),
     Product('양말', 5000)
   ];
-  int totalPrice = 0;
+  Map<Product, int> cart = {};
 
   void showProducts() {
     for (int i = 0; i < products.length; i++) {
@@ -19,7 +19,22 @@ class ShoppingMall {
   }
 
   void showTotal() {
-    print("장바구니에 $totalPrice원 어치를 담으셨네요 !");
+    if (cart.isEmpty) {
+      print("장바구니에 담긴 상품이 없습니다.");
+      return;
+    }
+    int totalPrice = 0;
+    String productString = "장바구니에 ";
+    for (var entry in cart.entries) {
+      int productTotal = entry.key.price * entry.value;
+      totalPrice += productTotal;
+      if (entry.key.name == cart.entries.first.key.name) {
+        productString += entry.key.name;
+      } else {
+        productString += ", ${entry.key.name}";
+      }
+    }
+    print("$productString(이)가 담겨있네요. 총 $totalPrice원 입니다!");
   }
 
   void addToCart() {
@@ -46,7 +61,7 @@ class ShoppingMall {
         print("0개보다 많은 개수의 상품만 담을 수 있어요 !");
         return;
       }
-      totalPrice += selectedProduct.price * amountInput;
+      cart[selectedProduct] = (cart[selectedProduct] ?? 0) + amountInput;
 
       print("장바구니에 상품이 담겼어요 !");
     } catch (e) {
@@ -55,10 +70,10 @@ class ShoppingMall {
   }
 
   void resetCart() {
-    if (totalPrice == 0) {
+    if (cart.isEmpty) {
       print("이미 장바구니가 비어있습니다");
     } else {
-      totalPrice = 0;
+      cart = {};
 
       print("장바구니를 초기화 합니다");
     }
