@@ -10,28 +10,31 @@ void main() {
     printUserMenu();
     try {
       inputMenu = int.parse(stdin.readLineSync()!);
-    } catch (e) {}
-    switch (inputMenu) {
-      case 1:
-        shoppingMall.showProducts();
-        break;
-      case 2:
-        shoppingMall.addToCart();
-        break;
-      case 3:
-        shoppingMall.showTotal();
-        break;
-      case 4:
-        shoppingMall.resetCart();
-        break;
-      case 5:
-        adminLoop(shoppingMall);
-        break;
-      case 6:
-        isUserRunning = exit();
-        break;
-      default:
-        print("지원하지 않는 기능입니다 ! 다시 시도해 주세요 ..");
+
+      switch (inputMenu) {
+        case 1:
+          shoppingMall.showProducts();
+          break;
+        case 2:
+          shoppingMall.addToCart();
+          break;
+        case 3:
+          shoppingMall.showTotal();
+          break;
+        case 4:
+          shoppingMall.resetCart();
+          break;
+        case 5:
+          adminLoop(shoppingMall);
+          break;
+        case 6:
+          isUserRunning = exit();
+          break;
+        default:
+          print("지원하지 않는 기능입니다 ! 다시 시도해 주세요 ..");
+      }
+    } catch (e) {
+      print("다시 입력해주세요");
     }
   }
 }
@@ -57,7 +60,9 @@ void adminLoop(ShoppingMall shoppingMall) {
             isAdminRunning = exit();
             break;
         }
-      } catch (e) {}
+      } catch (e) {
+        print("다시 입력해주세요");
+      }
     }
   }
 }

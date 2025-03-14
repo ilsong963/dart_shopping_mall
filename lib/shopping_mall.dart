@@ -59,6 +59,9 @@ class ShoppingMall {
           if (answer == 'Y' || answer == 'y') {
             products.removeAt(i);
             print('삭제 되었습니다');
+            return;
+          } else {
+            return;
           }
         } else {
           if (i == products.length - 1) {
@@ -82,7 +85,7 @@ class ShoppingMall {
 
       products.add(Product(productName, productPrice));
     } catch (e) {
-      print('다음에 이용해주세요');
+      print('입력값이 잘못되었습니다.');
     }
   }
 
