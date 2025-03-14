@@ -22,6 +22,9 @@ void main() {
         shoppingMall.showTotal();
         break;
       case 4:
+        shoppingMall.addProduct();
+        break;
+      case 5:
         isRunning = exit();
         break;
       case 6:
@@ -36,7 +39,7 @@ void main() {
 void printMenu() {
   print('-' * 110);
   print(
-      "[1] 상품 목록 보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품 보기 / [4] 프로그램 종료 / [6] 장바구니 초기화");
+      "[1] 상품 목록 보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품 보기 / [4] 상품 추가 / [5] 프로그램 종료 / [6] 장바구니 초기화");
   print('-' * 110);
 }
 
