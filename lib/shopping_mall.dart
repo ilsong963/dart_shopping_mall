@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'product.dart';
 
@@ -24,17 +25,15 @@ class ShoppingMall {
       return;
     }
     int totalPrice = 0;
-    String productString = "장바구니에 ";
+    print('-' * 110);
     for (var entry in cart.entries) {
       int productTotal = entry.key.price * entry.value;
       totalPrice += productTotal;
-      if (entry.key.name == cart.entries.first.key.name) {
-        productString += entry.key.name;
-      } else {
-        productString += ", ${entry.key.name}";
-      }
+
+      print('${entry.key.name} : ${entry.key.price} * ${entry.value}개');
     }
-    print("$productString(이)가 담겨있네요. 총 $totalPrice원 입니다!");
+    print('-' * 110);
+    print("총 $totalPrice원 입니다!");
   }
 
   void addToCart() {
