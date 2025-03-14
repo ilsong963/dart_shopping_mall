@@ -20,8 +20,7 @@ void main() {
         shoppingMall.showTotal();
         break;
       case 4:
-        print("이용해 주셔서 감사합니다 ~ 안녕히 가세요 !");
-        isRunning = false;
+        isRunning = exit();
         break;
       default:
         print("지원하지 않는 기능입니다 ! 다시 시도해 주세요 ..");
@@ -33,4 +32,23 @@ void printMenu() {
   print('-' * 110);
   print("[1] 상품 목록 보기 / [2] 장바구니에 담기 / [3] 장바구니에 담긴 상품의 총 가격 보기 / [4] 프로그램 종료");
   print('-' * 110);
+}
+
+bool exit() {
+  print("정말 종료하시겠습니까?");
+  try {
+    if (int.parse(stdin.readLineSync()!) == 5) {
+      print("이용해 주셔서 감사합니다 ~ 안녕히 가세요 !");
+
+      return false;
+    } else {
+      print("종료하지 않습니다.");
+
+      return true;
+    }
+  } catch (e) {
+    print("종료하지 않습니다.");
+
+    return true;
+  }
 }
